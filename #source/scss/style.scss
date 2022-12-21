@@ -10,6 +10,14 @@ body {
 
 }
 
+body.lock {
+	overflow: hidden;
+}
+
+body.lock_1 {
+	overflow: visible;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	
 }
@@ -27,7 +35,9 @@ h2 {
 }
 
 h3 {
-
+	color: #0499DD;
+	font-weight: 700;
+	font-size: 18px;
 }
 
 h4 {
@@ -101,6 +111,12 @@ p {
 	&:hover {
 		color: #d6d6d6;
 		text-shadow: 1px 1px 10px #000;
+	}
+	&:active {
+		color: yellow;
+	}
+	&:focus {
+		color: yellow;
 	}
 }
 
@@ -176,9 +192,11 @@ p {
 
 .wrapper__social li:active {
 	transform: scale(0.95);
+	color: yellow;
 }
 .wrapper__social li:focus {
 	transform: scale(0.95);
+	color: yellow;
 }
 
 .btn svg {
@@ -298,7 +316,7 @@ p {
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
 	.container {
-		max-width: 480px;
+		max-width: 738px;
 	}
 
 	@import "burger.scss";
@@ -417,7 +435,6 @@ p {
 @media (max-width: 320px) {
 
 }
-
 
 /************************************************************************************************************************************************************************************
 ************ВТОРОЙ БЛОК***************************
@@ -632,7 +649,9 @@ p {
 /************************************************************************************************************************************************************************************
 ************ТРЕТИЙ БЛОК***************************
 ********************************************************/
-.nature {}
+.nature {
+	padding: 40px 0;
+}
 .nature__wrapper {
 	position: relative;
 }
@@ -640,7 +659,7 @@ p {
 
 .nature__image img {
 	max-width: 100%;
-	border-radius: 10px;
+	border-radius: 0 10px 10px 0;
 }
 .nature__text {
 	position: absolute;
@@ -764,3 +783,640 @@ p {
 @media (max-width: 320px) {
 
 }
+
+/************************************************************************************************************************************************************************************
+************ЧЕТВЕРТЫЙ БЛОК***************************
+********************************************************/
+
+.views {
+	padding: 100px 0;
+}
+.views__title {
+	padding-bottom: 90px;
+}
+.views__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	padding-bottom: 60px;
+}
+
+.views__grid_item {
+	padding-left: 95px;
+}
+
+.bus_img,
+.jeep_img,
+.water_img,
+.canion_img {
+	position: relative;
+}
+
+.bus_img::before {
+	background: url('../img/svg/1.png') no-repeat;
+}
+.jeep_img::before {
+	background: url('../img/svg/2.png') no-repeat;
+}
+.water_img::before {
+	background: url('../img/svg/3.png') no-repeat;
+}
+.canion_img::before {
+	background: url('../img/svg/4 (2).png') no-repeat;
+}
+.bus_img::before,
+.jeep_img::before,
+.water_img::before,
+.canion_img::before {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	width: 75px;
+	height: 75px;
+}
+
+.views__grid_item p {
+	padding-top: 10px;
+}
+.views__button {
+	margin: 0 auto;
+	max-width: 550px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 20px;
+}
+
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ЧЕТВЕРТЫЙ БЛОК***************************
+********************************************************/
+
+/* Large desktops and laptops */
+@media (min-width: 1367px) {
+	
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	.views .container {
+		max-width: 650px;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.views__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+	
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+
+}
+
+
+/************************************************************************************************************************************************************************************
+************ПЯТЫЙ БЛОК***************************
+********************************************************/
+
+.gallery {
+	padding: 20px 0 70px 0;
+}
+
+.gallery__title {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 70px;
+}
+.gallery__wrapper {
+	padding: 0 15px;
+}
+.gallery__grid {
+	display: grid;
+	grid-template-columns: repeat(1fr 1fr 0.5fr 0.5fr 1fr 1fr );
+	grid-template-rows: repeat(4, [row] 1fr);
+	grid-gap: 20px;
+	
+}
+.gallery__grid-item {
+	min-height: 50px;
+	border-radius: 5px;
+	transition: all .5s ease;
+}
+
+.gallery__grid-item:hover {
+	box-shadow: 1px 1px 10px #000;
+}
+.gallery__grid-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.place_img {
+	grid-column: col 1 / col 3;
+	grid-row: row 1 / row 3;
+	//grid-area: place_img;
+}
+.waterfall_img {
+	grid-column: col 3 / col 5;
+	grid-row: row 1 / row 5;
+	//grid-area: waterfall_img;
+}
+.quadro_img {
+	grid-column: col 5 / col 6;
+	grid-row: row 1 / row 3;
+	//grid-area: quadro_img;
+}
+.sun_img {
+	grid-column: col 6 / col 7;
+	grid-row: row 1 / row 3;
+	//grid-area: sun_img;
+}
+.horse_img {
+	grid-column: col 1 / col 2;
+	grid-row: row 3 / row 5;
+	//grid-area: horse_img;
+}
+.green_img {
+	grid-column: col 2 / col 3;
+	grid-row: row 3 / row 4;
+	//grid-area: green_img;
+}
+.city_img {
+	grid-column: col 2 / col 3;
+	grid-row: row 4 / row 5;
+	//grid-area: city_img;
+}
+.lake_img {
+	grid-column: col 5 / col 7;
+	grid-row: row 3 / row 5;
+	//grid-area: lake_img;
+}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.8);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .8s ease 0s;
+}
+
+.popup.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup.open .popup__content {
+	transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+	opacity: 1;
+}
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+.popup__content {
+	background-color: #fff;
+	color: #000;
+	max-width: 800px;
+	margin: 30px;
+	position: relative;
+	opacity: 0;
+	transition: all .8s ease 0s;
+	transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+.popup__close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	color: #FFF;
+	text-decoration: none;
+}
+.popup__image img {
+	max-width: 100%;
+}
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ПЯТЫЙ БЛОК***************************
+********************************************************/
+
+/* Large desktops and laptops */
+@media (min-width: 1367px) {
+	
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.place_img,
+	.horse_img,
+	.green_img,
+	.city_img {
+		display: none;
+	}
+
+	.gallery__wrapper {
+		padding-right: 60px;
+	}
+
+	.gallery__grid {
+		grid-gap: 15px;
+	}
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+	.sun_img {
+		display: none;
+	}
+
+	.quadro_img {
+		grid-column: col 5 / col 7;
+		grid-row: row 1 / row 3;
+	}
+
+	.place_img {
+		display: block;
+		grid-column: span 7;
+		grid-row: row 5;
+		margin-left: 30px;
+	}
+
+	.gallery__grid {
+		grid-gap: 10px;
+	}
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+
+}
+
+
+/************************************************************************************************************************************************************************************
+************ШЕСТОЙ БЛОК***************************
+********************************************************/
+
+.form {
+	height: 100vh;
+	background: url('../img/form.png') 100% 100% / cover no-repeat;
+	margin-top: 70px;
+}
+.form__grid {
+	display: grid;
+	grid-template-columns: 1fr 3.5fr 3.5fr 1fr;
+	height: 100%;
+	align-items: center;
+}
+.form__wrapper {
+	height: 100%;
+	grid-column: 3 / 4;
+	background: url('../img/form_2.png') 100% 100% / cover no-repeat;
+}
+.form__box {
+	max-width: 360px;
+	margin: 0 auto;
+	height: 85%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: inherit;
+	padding: 70px 0;
+	padding: 30px 25px;
+}
+
+.form__text {
+	padding: 10px 15px;
+}
+
+.form__text p {
+	font-size: 24px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 29px;
+	padding-bottom: 15px;
+}
+
+.form__box-input {
+	padding: 25px 0 0 0;
+	border-bottom: 1px solid #fff;
+	transition: all .4s ease;
+}
+
+input:active {
+	
+}
+
+input {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	background-color: rgba(0,0,0,0.00001);
+	color: #fff;
+	font-size: 16px;
+	transition: all .4s ease;
+}
+input::text {color: #fff;}
+
+input::placeholder {color: #fff;}
+
+/* WebKit, Edge
+   ----------------------------  */
+input::-webkit-input-placeholder {color: #fff;}
+
+/* Edge
+   ----------------------------  */
+input::-ms-input-placeholder {color: #fff;}
+
+/* Firefox 4-18
+   ----------------------------  */
+input:-moz-placeholder {color: #fff;opacity: 1;}
+
+/* Firefox 19+
+   ----------------------------  */
+input::-moz-placeholder {color: #fff;opacity: 1;}
+
+/* IE 10-11
+   ----------------------------  */
+input:-ms-input-placeholder {color: #fff;}
+
+.form__text h4 {
+	font-weight: 500;
+}
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ШЕСТОЙ БЛОК***************************
+********************************************************/
+
+/* Large desktops and laptops */
+@media (min-width: 1367px) {
+	
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	.form__box {
+		height: 85%;
+		gap: 0;
+		padding-top: 50px;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.form__wrapper {
+		grid-column: 2 / 4;
+	}
+}
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+	.form__wrapper {
+		height: 85%;
+	}
+
+	.form {
+		margin: 0;
+	}
+
+	.btn {
+		padding: 16px 36px;
+	}
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+
+}
+
+/************************************************************************************************************************************************************************************
+************CЕДЬМОЙ БЛОК***************************
+********************************************************/
+
+.footer {
+	background-color: #EDEDED;
+	padding: 30px 0;
+	color: #282828;
+}
+
+footer li, 
+footer a {
+	color: #282828;
+	font-size: 14px;
+	gap: 8px;
+	transition: all .2s ease;
+	display: block;
+}
+
+.footer li:nth-child(2) {
+	margin: 8px 0;
+}
+.footer__grid {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr 1.1fr 1fr;
+	align-items: center;
+	//grid-template-rows: 1fr 1fr;
+}
+.grid__item-logo {
+	grid-column: 1 / 2;
+	//grid-row: 1 / 3;
+}
+.grid__item-logo img {
+	
+}
+.grid__item-nav {
+	grid-column: 2 / 3;
+	//grid-row: 1 / 3;
+}
+.grid__item-nav a:hover {
+	color: #000;
+	transform: scale(1.02) translateX(5px);
+}
+.grid__item-contacts {
+	grid-column: 3 / 4;
+	//grid-row: 1 / 3;
+}
+.telegram-icon:before {
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url('../img/svg/whats-footer.png') left / contain no-repeat;
+}
+.telegram-icon {
+	position: relative;
+	padding-left: 20px;
+}
+.whats-icon:before {
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url('../img/svg/tg-footer.png') left / contain no-repeat;
+}
+.whats-icon {
+	position: relative;
+	padding-left: 20px;
+}
+.grid__item-social {
+	grid-column: 4 / 5;
+	//grid-row: 1 / 3;
+}
+
+.mail-icon:before {
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url('../img/svg/mail.png') left / contain no-repeat;
+}
+.mail-icon {
+	position: relative;
+	padding-left: 20px;
+}
+.social__footer-icon {
+	display: flex;
+	align-items: center;
+	padding-top: 21px;
+}
+
+.footer__icon {
+	transition: all .2s ease;
+}
+
+.footer__icon:hover {
+	transform: scale(1.05);
+}
+.footer__icon:nth-child(2) {
+	margin: 0 17px 0 11px;
+}
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ СЕДЬМОЙ БЛОК***************************
+********************************************************/
+
+/* Large desktops and laptops */
+@media (min-width: 1367px) {
+	
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.footer__grid {
+		grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	.footer__grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 2fr 1fr 2fr;
+		justify-items: center;
+	}
+
+	.grid__item-logo {
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+	}
+	.grid__item-social {
+		grid-column: 1 / 3;
+		grid-row: 2 / 3;
+	}
+	.grid__item-nav {
+		grid-column: 1 / 2;
+		grid-row: 3 / 4;
+	}
+	.grid__item-contacts {
+		grid-column: 2 / 3;
+		grid-row: 3 / 4;
+	}
+
+	.social__footer-icon {
+		justify-content: center;
+	}
+	
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.footer__grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 2fr 1fr 2fr;
+		justify-items: center;
+	}
+
+	.grid__item-logo {
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+	}
+	.grid__item-social {
+		grid-column: 1 / 3;
+		grid-row: 2 / 3;
+	}
+	.grid__item-nav {
+		grid-column: 1 / 2;
+		grid-row: 3 / 4;
+	}
+	.grid__item-contacts {
+		grid-column: 2 / 3;
+		grid-row: 3 / 4;
+	}
+
+	.social__footer-icon {
+		justify-content: center;
+	}
+}
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+	.whats-icon:before {
+		height: 14px;
+	}
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+
+}
+

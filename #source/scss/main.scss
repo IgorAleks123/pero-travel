@@ -1,0 +1,623 @@
+/************************************************************************************************************************************************************************************
+************ЭКСКУРСИИ 1 БЛОК***************************
+********************************************************/
+body {
+	background: #E5E5E5;
+}
+
+.wrapper__excursions {
+	height: 53%;
+	background: url('../img/wrapper_2.png') center / cover no-repeat;
+}
+.wrapper__excursion-title {
+	padding-top: 100px;
+}
+.wrapper__excursion-title h1 {
+	text-transform: uppercase;
+}
+
+/************************************************************************************************************************************************************************************
+************ЭКСКУРСИИ 2 БЛОК***************************
+********************************************************/
+.excursions__filter {
+	background: #E5E5E5;
+	padding-bottom: 40px;
+}
+
+.excurions__filter-grid {}
+.excursions_item-choice {
+	text-align: center;
+	background: #fff;
+	max-width: 1120px;
+	margin: 0 auto;
+	border-radius: 10px;
+	margin: 40px 0;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+}
+.excursions_choice-tour {
+	text-align: center;
+	padding: 60px 0 70px 0;
+}
+
+.excursions_choice-tour ul{
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	text-align: center;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 460px;
+	border-bottom: 2px solid grey;
+	
+}
+
+.excursions_choice-tour li {
+	font-weight: 500;
+	padding-bottom: 11px;
+
+}
+
+.active_blue {
+
+}
+
+.active_blue p:hover {
+	color: #0499DD;
+}
+
+.excursions_choice-tour li:hover {
+	border-bottom: 2px solid #0499DD;
+	padding-bottom: 9px;
+}
+
+.form__excursions {
+	padding-bottom: 60px;
+
+}
+.form__box-excursions {
+	display: flex;
+	justify-content: space-around;
+}
+.excursions-input {
+	text-align: center;
+	background: #fff;
+	max-width: 235px;
+} 
+
+input[type="search"]::-webkit-input-placeholder {
+    color: #000;
+} 
+
+input[type="search"]::-moz-placeholder {
+    color: #000;
+}
+
+.in-put:active {
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.in-put:focus {
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.in-put::placeholder {
+	color: #000000;
+}
+
+.excursions-input input {
+	padding: 16px 0 17px 25px;
+	color: #000;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	position: relative;
+	background-size: auto;
+	
+}
+.point {
+	background: url('../img/svg/point.svg') 88% 50% / contain no-repeat;
+}
+.calendar {
+	background: url('../img/svg/calendar.svg') 88% 50% / contain no-repeat;
+}
+.people {
+	background: url('../img/svg/people.svg') 88% 50% / contain no-repeat;
+}
+.btn-form {
+	align-self: center;
+	padding: 17px 15px;
+	border-radius: 10px !important;
+}
+
+.exscur-grid {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr;
+	grid-gap: 40px;
+}
+
+.exscur__grid-filter {
+	align-self: start;
+	min-width: 310px;
+	background: #fff;
+	border-radius: 10px;
+	padding: 25px 35px;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+}
+.exscur__grid-filter h3 {
+	font-size: 14px;
+	padding-bottom: 30px;
+}
+.filter__price {
+	margin-bottom: 40px;
+	padding-bottom: 46px;
+	border-bottom: 1px solid #EDEDED;
+}
+
+.filter__price_flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+._active_price {
+	display: none;
+}
+
+._active_hide {
+	visibility: hidden;
+}
+.menu__plus {
+	z-index: 7;
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 27px;
+    cursor: pointer;
+    text-align: end;
+}
+
+.menu__plus span,
+.menu__plus::before {
+    left: 0;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    background-color: #0499DD;
+    display: block;
+}
+
+.menu__plus::before {
+	height: 2px;
+    width: 100%;
+    content: " ";
+    top: 0;
+}
+
+.menu__plus span {
+	height: 2px;
+	width: 100%;
+   	top: 0;
+   	transform: rotate(180deg);
+    
+}
+
+
+.menu__plus._active_price span {
+    transform: rotate(90deg);
+}
+
+.filter_black {
+	color: #000;
+}
+.filter__people {
+	margin-bottom: 40px;
+	padding-bottom: 14px;
+	border-bottom: 1px solid #EDEDED;
+}
+.filter__people-grid {
+	display: grid;
+	/*grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr 1fr 1fr;*/
+	grid-gap: 5px;
+	grid-template-areas: 
+	"one two three"
+	"four five six"
+	"seven eigth nine"
+	"ten eleven eleven"
+}
+.filter__people-item {
+	text-align: center;
+	justify-items: end;
+	align-items: center;
+	color: #000;
+	font-size: 12px;
+	border: 2px solid #EDEDED;
+	border-radius: 40px;
+	padding: 7px 18px 8px 18px;
+	min-width: max-content;
+}
+
+.filter__people-item:hover {
+	cursor: pointer;
+	border-color: #0499DD;
+}
+
+.el-1 {
+	grid-area: one;
+}
+.el-2 {
+	grid-area: two;
+}
+.el-3 {
+	grid-area: three;
+}
+.el-4 {
+	grid-area: four;
+}
+.el-5 {
+	grid-area: five;
+}
+.el-6 {
+	grid-area: six;
+}
+.el-7 {
+	grid-area: seven;
+}
+.el-8 {
+	grid-area: eigth;
+}
+.el-9 {
+	grid-area: nine;
+}
+
+.el-10 {
+	grid-area: ten;
+}
+
+.ten {
+	grid-area: eleven;
+}
+
+.filter__place * {
+
+}
+
+.filter__place {
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #EDEDED;
+	color: #000;
+}
+.filter__place p {
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.filter__place-radio {
+
+}
+
+.place__radio {
+	display: flex;
+	gap: 10px;
+	margin: 10px 0;
+}
+.place__radio input {
+	width: min-content;
+}
+
+.filter__duration {
+	border-bottom: 1px solid #EDEDED;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+
+.filter__date {
+	border-bottom: 1px solid #EDEDED;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+
+.exscur__grid-filter .btn {
+	display: block;
+	text-align: center;
+}
+.remove__filter {
+	text-align: center;
+	font-weight: 500;
+	font-size: 12px;
+	color: #282828;
+	margin: 12px 0 10px 0;
+	display: block;
+}
+
+.exscur__grid-body {}
+.exscur__tour-title {
+	padding-bottom: 40px;
+}
+.exscur__tour_flex {
+	display: flex;
+	justify-content: space-around;
+	gap: 47px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.exscur__tour-img {
+	/*flex: 0 0 35%;*/
+	min-width: 260px;
+}
+
+.exscur__tour-img img {
+	object-fit: contain;
+	width: 100%;
+}
+.exscur__tour-item {
+	padding: 27px 43px 27px 0;
+}
+
+.exscur__tour-item h4 {
+	font-size: 12px;
+	font-weight: 500;
+	padding-bottom: 5px;
+}
+.exscur__tour_text-black {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+}
+
+.exscur__text_prtime-flex {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 20px 0;
+}
+.exscur__tour-text_price {
+
+}
+
+.exscur__tour-text_price p:nth-child(2) {
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 12px;
+	padding-top: 3px;
+}
+
+.price_blue {
+	font-size: 18px;
+	font-weight: 700;
+	color: #0499DD;
+	position: relative;
+	padding-left: 25px;
+}
+.time_blue {
+	font-size: 18px;
+	font-weight: 700;
+	color: #0499DD;
+	position: relative;
+	padding-left: 20px;
+}
+.price_blue:before {
+	position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/svg/price_blue.svg) 0 0 / contain no-repeat;
+}
+.time_blue:before {
+	position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/svg/time_blue.svg) no-repeat;
+}
+.exscur__tour-text {
+	padding-left: 20px;
+	border-left: 3px solid #0499DD;
+	border-radius: 3px;
+}
+
+.exscur__tour-text p {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: #000;
+	margin-bottom: 20px;
+}
+
+.exscur__tour-item .btn {
+	display: inline-block;
+}
+
+.exscur__tour-btn {
+	display: inline-block;
+	width: 50px;
+	background: #EDEDED;
+	height: 50px;
+	border-radius: 25px;
+	vertical-align: middle;
+	margin-left: 10px;
+	transition: all .5s ease-in-out;
+}
+
+.exscur__tour-btn:hover {
+	border: 4px solid #0499DD;
+	background: #fff;
+	cursor: pointer;
+}
+
+.exscur__tour-btn img {
+	width: 100%;
+	height: 100%;
+	object-fit: none;
+}
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ***************************
+********************************************************/
+
+/* Large desktops and laptops */
+@media (min-width: 1367px) {
+	.wrapper__flex {
+		//padding-top: 300px;
+	}
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.container {
+		max-width: 768px;
+	}
+
+	.wrapper__flex {
+		padding-top: 20px;
+		align-items: center;
+	}
+
+	h1 {
+		font-size: 48px;
+	}
+
+	.wrapper__title:after {
+		top: 55px;
+		left: 338px;
+	}
+
+	.wrapper__title span {
+		max-width: 700px;
+	}
+
+	.wrapper__excursions {
+		height: 37%;
+	}
+	.excursions-input {
+		max-width: 160px;
+	}
+
+	.excursions-input input {
+		padding-left: 15px;
+		font-size: 14px
+	}
+
+	.exscur__tour-img {
+		min-width: 113px;
+	}
+
+	.exscur__tour-img img {
+		object-fit: cover;
+		height: 100%
+	}
+
+	.exscur__text_prtime-flex {
+		gap:  0;
+	}
+
+	.price_blue {
+		padding-left: 18px;
+		font-size: 14px;
+	}
+
+	.time_blue {
+		font-size: 14px;
+	}
+
+	.exscur__tour-text p {
+		line-height: 12px;
+	}
+	.exscur__tour-item .btn {
+		padding: 16px 30px;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.wrapper__excursions {
+		height: 37%;
+	}
+
+	.excursions-input {
+		max-width: 160px;
+	}
+
+	.excursions-input input {
+		padding-left: 15px;
+		font-size: 14px
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.wrapper__excursions {
+		min-height: 244px;
+		height: 20%
+	}
+
+	.excurions__filter-grid {
+		max-width: 610px;
+	}
+	.wrapper__excursion-title {
+		padding-top: 30px
+	}
+
+	.form__box-excursions {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.excursions-input {
+		max-width: 170px;
+	}
+
+	.excursions-input input {
+		font-size: 14px;
+	}
+
+	.excursions_choice-tour p {
+		font-size: 12px
+	}
+	.excursions_choice-tour ul {
+		max-width: 100%;
+		margin: 0 15px 0 15px;
+	}
+
+	.excursions_choice-tour {
+		padding-bottom: 60px
+	}
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+	.excursions__filter .container {
+		max-width: 400px;
+	}
+
+	.excursions_choice-tour p {
+		font-size: 11px;
+	}
+
+	.form__box-excursions {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.btn-form {
+		padding: 14px 52px;
+	}
+
+	.excursions-input {
+
+	}
+}
+
+/* Iphone 5 */
+@media (max-width: 390px) {
+	.excursions_choice-tour p {
+    	font-size: 10px;
+	}
+}
