@@ -66,6 +66,12 @@ body {
   color: #FAF8F5;
   font-family: 'Montserrat', sans-serif; }
 
+body.lock {
+  overflow: hidden; }
+
+body.lock_1 {
+  overflow: visible; }
+
 h1 {
   font-size: 72px;
   color: #fff;
@@ -75,6 +81,11 @@ h2 {
   color: #0499DD;
   font-weight: 700;
   font-size: 24px; }
+
+h3 {
+  color: #0499DD;
+  font-weight: 700;
+  font-size: 18px; }
 
 h4 {
   font-size: 14px;
@@ -158,6 +169,10 @@ p {
   .header__menu a:hover {
     color: #d6d6d6;
     text-shadow: 1px 1px 10px #000; }
+  .header__menu a:active {
+    color: yellow; }
+  .header__menu a:focus {
+    color: yellow; }
 
 /************************************************************************************************************************************************************************************
 ************ПЕРВЫЙ БЛОК***************************
@@ -233,12 +248,14 @@ p {
 .wrapper__social li:active {
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
-  transform: scale(0.95); }
+  transform: scale(0.95);
+  color: yellow; }
 
 .wrapper__social li:focus {
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
-  transform: scale(0.95); }
+  transform: scale(0.95);
+  color: yellow; }
 
 .btn svg {
   -webkit-transition: .3s all ease;
@@ -366,7 +383,7 @@ p {
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
-    max-width: 480px; }
+    max-width: 738px; }
   /*******БУРГЕР***********************************/
   .header__menu {
     display: block;
@@ -838,12 +855,15 @@ p {
 /************************************************************************************************************************************************************************************
 ************ТРЕТИЙ БЛОК***************************
 ********************************************************/
+.nature {
+  padding: 40px 0; }
+
 .nature__wrapper {
   position: relative; }
 
 .nature__image img {
   max-width: 100%;
-  border-radius: 10px; }
+  border-radius: 0 10px 10px 0; }
 
 .nature__text {
   position: absolute;
@@ -928,5 +948,623 @@ p {
     font-size: 12px; }
   .nat_text {
     padding: 15px 0 15px 0; } }
+
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+************ЧЕТВЕРТЫЙ БЛОК***************************
+********************************************************/
+.views {
+  padding: 100px 0; }
+
+.views__title {
+  padding-bottom: 90px; }
+
+.views__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding-bottom: 60px; }
+
+.views__grid_item {
+  padding-left: 95px; }
+
+.bus_img,
+.jeep_img,
+.water_img,
+.canion_img {
+  position: relative; }
+
+.bus_img::before {
+  background: url("../img/svg/1.png") no-repeat; }
+
+.jeep_img::before {
+  background: url("../img/svg/2.png") no-repeat; }
+
+.water_img::before {
+  background: url("../img/svg/3.png") no-repeat; }
+
+.canion_img::before {
+  background: url("../img/svg/4 (2).png") no-repeat; }
+
+.bus_img::before,
+.jeep_img::before,
+.water_img::before,
+.canion_img::before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 75px; }
+
+.views__grid_item p {
+  padding-top: 10px; }
+
+.views__button {
+  margin: 0 auto;
+  max-width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ЧЕТВЕРТЫЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .views .container {
+    max-width: 650px; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .views__grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; } }
+
+/* Portrait phones and smaller */
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+************ПЯТЫЙ БЛОК***************************
+********************************************************/
+.gallery {
+  padding: 20px 0 70px 0; }
+
+.gallery__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 70px; }
+
+.gallery__wrapper {
+  padding: 0 15px; }
+
+.gallery__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ()[1fr 1fr 0.5fr 0.5fr 1fr 1fr];
+  grid-template-columns: repeat(1fr 1fr 0.5fr 0.5fr 1fr 1fr);
+  -ms-grid-rows: ([row] 1fr)[4];
+  grid-template-rows: repeat(4, [row] 1fr);
+  grid-gap: 20px; }
+
+.gallery__grid-item {
+  min-height: 50px;
+  border-radius: 5px;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.gallery__grid-item:hover {
+  -webkit-box-shadow: 1px 1px 10px #000;
+  box-shadow: 1px 1px 10px #000; }
+
+.gallery__grid-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5px; }
+
+.place_img {
+  grid-column: col 1 / col 3;
+  grid-row: row 1 / row 3; }
+
+.waterfall_img {
+  grid-column: col 3 / col 5;
+  grid-row: row 1 / row 5; }
+
+.quadro_img {
+  grid-column: col 5 / col 6;
+  grid-row: row 1 / row 3; }
+
+.sun_img {
+  grid-column: col 6 / col 7;
+  grid-row: row 1 / row 3; }
+
+.horse_img {
+  grid-column: col 1 / col 2;
+  grid-row: row 3 / row 5; }
+
+.green_img {
+  grid-column: col 2 / col 3;
+  grid-row: row 3 / row 4; }
+
+.city_img {
+  grid-column: col 2 / col 3;
+  grid-row: row 4 / row 5; }
+
+.lake_img {
+  grid-column: col 5 / col 7;
+  grid-row: row 3 / row 5; }
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .8s ease 0s;
+  -o-transition: all .8s ease 0s;
+  transition: all .8s ease 0s; }
+
+.popup.open {
+  opacity: 1;
+  visibility: visible; }
+
+.popup.open .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+  transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+  opacity: 1; }
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 30px 10px; }
+
+.popup__content {
+  background-color: #fff;
+  color: #000;
+  max-width: 800px;
+  margin: 30px;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all .8s ease 0s;
+  -o-transition: all .8s ease 0s;
+  transition: all .8s ease 0s;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg); }
+
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none; }
+
+.popup__image img {
+  max-width: 100%; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ПЯТЫЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .place_img,
+  .horse_img,
+  .green_img,
+  .city_img {
+    display: none; }
+  .gallery__wrapper {
+    padding-right: 60px; }
+  .gallery__grid {
+    grid-gap: 15px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .sun_img {
+    display: none; }
+  .quadro_img {
+    grid-column: col 5 / col 7;
+    grid-row: row 1 / row 3; }
+  .place_img {
+    display: block;
+    -ms-grid-column-span: 7;
+    grid-column: span 7;
+    grid-row: row 5;
+    margin-left: 30px; }
+  .gallery__grid {
+    grid-gap: 10px; } }
+
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+************ШЕСТОЙ БЛОК***************************
+********************************************************/
+.form {
+  height: 100vh;
+  background: url("../img/form.png") 100% 100%/cover no-repeat;
+  margin-top: 70px; }
+
+.form__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3.5fr 3.5fr 1fr;
+  grid-template-columns: 1fr 3.5fr 3.5fr 1fr;
+  height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.form__wrapper {
+  height: 100%;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  background: url("../img/form_2.png") 100% 100%/cover no-repeat; }
+
+.form__box {
+  max-width: 360px;
+  margin: 0 auto;
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: inherit;
+  -ms-flex-align: inherit;
+  align-items: inherit;
+  padding: 70px 0;
+  padding: 30px 25px; }
+
+.form__text {
+  padding: 10px 15px; }
+
+.form__text p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 29px;
+  padding-bottom: 15px; }
+
+.form__box-input {
+  padding: 25px 0 0 0;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease; }
+
+input {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1e-05);
+  color: #fff;
+  font-size: 16px;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease; }
+
+input::text {
+  color: #fff; }
+
+input::-webkit-input-placeholder {
+  color: #fff; }
+
+input:-ms-input-placeholder {
+  color: #fff; }
+
+input::-ms-input-placeholder {
+  color: #fff; }
+
+input::placeholder {
+  color: #fff; }
+
+/* WebKit, Edge
+   ----------------------------  */
+input::-webkit-input-placeholder {
+  color: #fff; }
+
+/* Edge
+   ----------------------------  */
+input::-ms-input-placeholder {
+  color: #fff; }
+
+/* Firefox 4-18
+   ----------------------------  */
+input:-moz-placeholder {
+  color: #fff;
+  opacity: 1; }
+
+/* Firefox 19+
+   ----------------------------  */
+input::-moz-placeholder {
+  color: #fff;
+  opacity: 1; }
+
+/* IE 10-11
+   ----------------------------  */
+input:-ms-input-placeholder {
+  color: #fff; }
+
+.form__text h4 {
+  font-weight: 500; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ШЕСТОЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .form__box {
+    height: 85%;
+    gap: 0;
+    padding-top: 50px; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .form__wrapper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / 4; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .form__wrapper {
+    height: 85%; }
+  .form {
+    margin: 0; }
+  .btn {
+    padding: 16px 36px; } }
+
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+************CЕДЬМОЙ БЛОК***************************
+********************************************************/
+.footer {
+  background-color: #EDEDED;
+  padding: 30px 0;
+  color: #282828; }
+
+footer li,
+footer a {
+  color: #282828;
+  font-size: 14px;
+  gap: 8px;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  display: block; }
+
+.footer li:nth-child(2) {
+  margin: 8px 0; }
+
+.footer__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr 1.1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1.1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.grid__item-logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2; }
+
+.grid__item-nav {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3; }
+
+.grid__item-nav a:hover {
+  color: #000;
+  -webkit-transform: scale(1.02) translateX(5px);
+  -ms-transform: scale(1.02) translateX(5px);
+  transform: scale(1.02) translateX(5px); }
+
+.grid__item-contacts {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4; }
+
+.telegram-icon:before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../img/svg/whats-footer.png") left/contain no-repeat; }
+
+.telegram-icon {
+  position: relative;
+  padding-left: 20px; }
+
+.whats-icon:before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../img/svg/tg-footer.png") left/contain no-repeat; }
+
+.whats-icon {
+  position: relative;
+  padding-left: 20px; }
+
+.grid__item-social {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5; }
+
+.mail-icon:before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../img/svg/mail.png") left/contain no-repeat; }
+
+.mail-icon {
+  position: relative;
+  padding-left: 20px; }
+
+.social__footer-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 21px; }
+
+.footer__icon {
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease; }
+
+.footer__icon:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); }
+
+.footer__icon:nth-child(2) {
+  margin: 0 17px 0 11px; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ СЕДЬМОЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .footer__grid {
+    -ms-grid-columns: 1fr 1.5fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr; } }
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer__grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 2fr 1fr 2fr;
+    grid-template-rows: 2fr 1fr 2fr;
+    justify-items: center; }
+  .grid__item-logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2; }
+  .grid__item-social {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3; }
+  .grid__item-nav {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4; }
+  .grid__item-contacts {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4; }
+  .social__footer-icon {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .footer__grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 2fr 1fr 2fr;
+    grid-template-rows: 2fr 1fr 2fr;
+    justify-items: center; }
+  .grid__item-logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2; }
+  .grid__item-social {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3; }
+  .grid__item-nav {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4; }
+  .grid__item-contacts {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4; }
+  .social__footer-icon {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .whats-icon:before {
+    height: 14px; } }
 
 /* Iphone 5 */
