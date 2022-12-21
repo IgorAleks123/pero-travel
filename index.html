@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Raleway:wght@900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Raleway:wght@900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 	<title>Pero Travel-путешествуй вместе</title>
 </head>
 <body>
-	<main class="wrapper">
+	<main class="wrapper" id="wrapper">
 		<header>
 	<div class="container">
 		<article class="header">
@@ -23,8 +23,8 @@
 				</div>
 			<nav class="header__menu" id="menu">
 				<ul>
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Экскурсии</a></li>
+					<li><a href="#wrapper">Главная</a></li>
+					<li><a href="excursions.html" target="_blank">Экскурсии</a></li>
 					<li><a href="#">Личный кабинет</a></li>
 				</ul>
 			</nav>
@@ -52,7 +52,7 @@
 				</section>
 			</article>
 			<div class="btn">
-				<a href="#">К экскурсиям</a>
+				<a href="excursions.html" target="_blank">К экскурсиям</a>
 				<svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M14.3536 4.35355C14.5488 4.15829 14.5488 3.84171 14.3536 3.64645L11.1716 0.464466C10.9763 0.269204 10.6597 0.269204 10.4645 0.464466C10.2692 0.659728 10.2692 0.976311 10.4645 1.17157L13.2929 4L10.4645 6.82843C10.2692 7.02369 10.2692 7.34027 10.4645 7.53553C10.6597 7.7308 10.9763 7.7308 11.1716 7.53553L14.3536 4.35355ZM0 4.5H14V3.5H0V4.5Z" fill="white"/>
 				</svg>
@@ -77,7 +77,7 @@
 					<h2>Популярные экскурсии</h2>
 				</div>
 				<div class="excursions__view">
-					<a href="#">Смотреть все</a>
+					<a href="excursions.html">Смотреть все</a>
 				</div>
 			</section>
 		</div>
@@ -224,8 +224,259 @@
 			</section>
 		</article>
 	</main>
+	<main class="views">
+		<div class="container">
+			<div class="views__title">
+				<h2>Виды экскурсий</h2>
+			</div>
+			<article class="views__grid">
+				<div class="views__grid_item bus_img">
+					<h3>Автобусный тур</h3>
+					<P>Один из самых насыщенных впечатлениями, доступных по цене и популярных видов отдыха. Во время одной поездки можно посмотреть достопримечательности сразу нескольких городов, причем обойдется это едва ли не в разы дешевле классического экскурсионного тура с ночевками в отелях.</P>
+				</div>
+				<div class="views__grid_item jeep_img">
+					<h3>Джиппинг</h3>
+					<p>Это путешествие на автомобилях высокой проходимости с преодолением естественных препятствий, это экстремальный вид спорта и отдыха, представляющий собой прохождение туристического маршрута по бездорожью на автомобилях.</p>
+				</div>
+				<div class="views__grid_item water_img">
+					<h3>Яхтинг</h3>
+					<p>Это то же, что круиз на лайнере или прогулка на пароме, только на яхте больше свободы, размеры судна в разы меньше, нет назойливой команды, можно самостоятельно почувствовать себя капитаном, постоять за штурвалом. Именно здесь вы почувствуете величайшие просторы Черногор моря.</p>
+				</div>
+				<div class="views__grid_item canion_img">
+					<h3>Каньонинг</h3>
+					<p>Это экстремально-спортивный вид отдыха, который заключается в преодолении каньонов (обводненных или нет) при помощи альпинистского и иного снаряжения, а иногда и вброд, но без лодок или иных плавсредств.</p>
+				</div>				
+			</article>
+			<section class="views__button">
+				<p>Выбирайте на нашем сайте экскурсию, которая подходит именно вам и записывайтесь онлайн без очередей, просто и быстро!</p>
+				<div class="btn">
+					<a href="#">К экскурсиям</a>
+					<svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M14.3536 4.35355C14.5488 4.15829 14.5488 3.84171 14.3536 3.64645L11.1716 0.464466C10.9763 0.269204 10.6597 0.269204 10.4645 0.464466C10.2692 0.659728 10.2692 0.976311 10.4645 1.17157L13.2929 4L10.4645 6.82843C10.2692 7.02369 10.2692 7.34027 10.4645 7.53553C10.6597 7.7308 10.9763 7.7308 11.1716 7.53553L14.3536 4.35355ZM0 4.5H14V3.5H0V4.5Z" fill="white"/>
+					</svg>
+				</div>	
+			</section>
+		</div>
+	</main>
+	<main id="gallery" class="gallery">
+		<div class="container">
+			<div class="gallery__title">
+				<div class="gallery_title_text">
+					<h2>Галерея</h2>
+				</div>
+				<div class="excursions__view">
+					<a href="#">Смотреть все</a>
+				</div>
+			</div>
+		</div>
+		<article class="gallery__wrapper">
+			<div class="gallery__grid">
+				<section class="gallery__grid-item place_img">
+					<a class="popup__link" href="#image">
+						<img src="./img/gallery1.png" alt="">
+					</a>
+				</section>
+				<section class="gallery__grid-item waterfall_img">
+					<a class="popup__link" href="#image_2">
+						<img class="popup__link" src="./img/gallery5.png" alt="">
+					</a>
+				</section>
+				<section class="gallery__grid-item quadro_img">
+					<a class="popup__link" href="#image_3">
+						<img src="./img/gallery6.png" alt="">
+					</a>
+				</section>
+				<section class="gallery__grid-item sun_img">
+					<a class="popup__link" href="#image_4">
+						<img src="./img/gallery7.png" alt="">
+					</a>
+				</section>
+				<section class="gallery__grid-item horse_img">
+					<a class="popup__link" href="#image_5">
+						<img src="./img/gallery2.png" alt="">
+					</a>
+				</section>
+				<section class="gallery__grid-item green_img">
+					<a class="popup__link" href="#image_6">
+						<img src="./img/gallery3.png" alt="">
+					</a>
+				</section>
+				<section class="gallery__grid-item city_img">
+					<a class="popup__link" href="#image_7">
+						<img src="./img/gallery4.png" alt="">
+					</a>
+				</section>
+				<section class="gallery__grid-item lake_img">
+					<a class="popup__link" href="#image_8">
+						<img src="./img/gallery8.png" alt="">
+					</a>
+				</section>
+			</div>
+		</article>
+		<div id="image" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#gallery" class="popup__close close__popup">X</a>
+					<div class="popup__image">
+						<img src="./img/gallery1.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="image_2" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#gallery" class="popup__close close__popup">X</a>
+					<div class="popup__image">
+						<img src="./img/gallery5.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="image_3" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#gallery" class="popup__close close__popup">X</a>
+					<div class="popup__image">
+						<img src="./img/gallery6.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="image_4" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#gallery" class="popup__close close__popup">X</a>
+					<div class="popup__image">
+						<img src="./img/gallery7.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="image_5" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#gallery" class="popup__close close__popup">X</a>
+					<div class="popup__image">
+						<img src="./img/gallery2.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="image_6" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#gallery" class="popup__close close__popup">X</a>
+					<div class="popup__image">
+						<img src="./img/gallery3.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="image_7" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#gallery" class="popup__close close__popup">X</a>
+					<div class="popup__image">
+						<img src="./img/gallery4.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="image_8" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#gallery" class="popup__close close__popup">X</a>
+					<div class="popup__image">
+						<img src="./img/gallery8.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<main class="form">
+		<article class="form__grid">
+			<section class="form__wrapper">
+				<form class="form__box" action="sendmail.php" method="post">
+					<div class="form__text">
+						<p>Остались вопросы?</p>
+						<h4>Оставь заявку и мы ответим</h4>
+					</div>
+					<div class="form__box-input">
+						<input type="text" name="name" placeholder="Имя">
+					</div>
+					<div class="form__box-input">
+						<input type="text" name="phone" placeholder="Телефон">
+					</div>
+					<div class="form__box-input">
+						<input type="email" name="email" placeholder="Почта">
+					</div>
+					<div class="btn">
+				<a href="#">Оставить заявку</a>
+				<svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M14.3536 4.35355C14.5488 4.15829 14.5488 3.84171 14.3536 3.64645L11.1716 0.464466C10.9763 0.269204 10.6597 0.269204 10.4645 0.464466C10.2692 0.659728 10.2692 0.976311 10.4645 1.17157L13.2929 4L10.4645 6.82843C10.2692 7.02369 10.2692 7.34027 10.4645 7.53553C10.6597 7.7308 10.9763 7.7308 11.1716 7.53553L14.3536 4.35355ZM0 4.5H14V3.5H0V4.5Z" fill="white"/>
+				</svg>
+			</div>
+				</form>
+			</section>
+		</article>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<article class="footer__grid">
+				<section class="grid__item-logo">
+					<img src="./img/svg/logo2.png" alt="">
+				</section>
+				<section class="grid__item-nav">
+					<ul>
+					    <li>
+					    	<a href="#">Главная</a>
+					    </li>
+					    <li>
+					    	<a href="#">Экскурсии</a>
+					    </li>
+					    <li>
+					    	<a href="#">Личный кабинет</a>
+					    </li>
+					</ul>
+				</section>
+				<section class="grid__item-contacts">
+					<ul>
+					    <li class="telegram-icon">+7 964 944 18 74</li>
+					    <li class="whats-icon">+7 918 919 98 28</li>
+					    <li class="whats-icon">Телеграм-бот PeroTravel</li>
+					</ul>
+				</section>
+				<section class="grid__item-social">
+					<ul>
+						<li class="mail-icon">office@perotravel.ru</li>
+						<li>
+							<div class="social__footer-icon">
+								<div class="footer__icon">
+									<a href="#">
+										<img src="./img/svg/vk-color.png" alt="">
+									</a>
+								</div>
+								<div class="footer__icon">
+									<a href="#">
+										<img src="./img/svg/inst-color.png" alt="">
+									</a>
+								</div>
+								<div class="footer__icon">
+									<a href="#">
+										<img src="./img/svg/facebook-color.png" alt="">
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</article>
+		</div>
+	</footer>
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/slider.js"></script>
+	<script src="js/popup.js"></script>
 </body>
 </html>
