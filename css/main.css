@@ -368,6 +368,9 @@ input[type="search"]::-moz-placeholder {
   /*flex: 0 0 35%;*/
   min-width: 260px; }
 
+.excs__flex_480 {
+  display: none; }
+
 .exscur__tour-img img {
   -o-object-fit: contain;
   object-fit: contain;
@@ -524,7 +527,14 @@ input[type="search"]::-moz-placeholder {
     max-width: 160px; }
   .excursions-input input {
     padding-left: 15px;
-    font-size: 14px; } }
+    font-size: 14px; }
+  .exscur-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center; }
+  .exscur__grid-filter {
+    grid-row: none;
+    min-width: 591px; } }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
@@ -552,7 +562,26 @@ input[type="search"]::-moz-placeholder {
     max-width: 100%;
     margin: 0 15px 0 15px; }
   .excursions_choice-tour {
-    padding-bottom: 60px; } }
+    padding-bottom: 60px; }
+  .exscur-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center; }
+  .exscur__grid-filter {
+    grid-row: none;
+    min-width: 460 px; }
+  .exscur__tour_flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0; }
+  .exscur__tour-item {
+    padding: 27px 45px 45px 30px; }
+  .excs__flex_1090 {
+    display: none; }
+  .excs__flex_480 {
+    display: block; } }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
@@ -573,5 +602,9 @@ input[type="search"]::-moz-placeholder {
 
 /* Iphone 5 */
 @media (max-width: 390px) {
+  .excursions__filter .container {
+    max-width: 360px; }
   .excursions_choice-tour p {
-    font-size: 10px; } }
+    font-size: 9px; }
+  .price_blue {
+    font-size: 14px; } }
